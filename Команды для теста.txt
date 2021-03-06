@@ -1,0 +1,47 @@
+SELECT id,name,theme,author_id,price,circulation,date,num_of_pages FROM books WHERE num_of_pages > 200;
+
+bookstore=# SELECT id,name,theme,author_id,price,circulation,date,num_of_pages FROM books WHERE num_of_pages > 200;
+ id |               name                | theme | author_id | price | circulation |    date    | num_of_pages
+----+-----------------------------------+-------+-----------+-------+-------------+------------+--------------
+  2 | The Fellowship of the Ring        |     1 |         6 |   250 |     3000000 | 1954-07-29 |          300
+  3 | The Two Towers                    |     1 |         6 |   300 |     3300000 | 1954-11-11 |          330
+  4 | The Return of the King            |     1 |         6 |   330 |     3500000 | 1955-10-20 |          350
+  5 | The Lord of the Rings             |     1 |         6 |  1000 |     5000000 | 1956-10-20 |         1000
+  6 | The Silmarillion                  |     1 |         6 |   500 |     2000000 | 1977-09-15 |          365
+  7 | A Study in Scarlet                |     2 |         1 |   200 |     2000000 | 1887-03-25 |          234
+  8 | The Sign of the Four              |     2 |         1 |   220 |     3000000 | 1890-02-21 |          301
+  9 | The Hound of the Baskervilles     |     2 |         1 |   220 |     3400000 | 1901-01-19 |          299
+ 10 | The Valley of Fear                |     2 |         1 |   220 |     2010000 | 1915-05-01 |          281
+ 11 | The Case-Book of Sherlock Holmes  |     2 |         1 |   330 |     2000000 | 1927-12-12 |          320
+ 12 | The Adventures of Sherlock Holmes |     2 |         1 |   340 |     3000001 | 1892-07-03 |          300
+ 13 | The Memoirs of Sherlock Holmes    |     2 |         1 |   350 |     3400020 | 1894-06-21 |          330
+ 14 | The Return of Sherlock Holmes     |     2 |         1 |   340 |     2000000 | 1905-02-01 |          320
+ 15 | His Last Bow                      |     2 |         1 |   340 |     1800000 | 1917-01-02 |          345
+ 16 | The Cathedral                     |     3 |         4 |   230 |      300000 | 1968-05-27 |          245
+ 21 | Zakhar Berkut                     |     6 |         2 |   230 |     1000000 | 1883-11-24 |          240
+ 23 | Moses                             |     7 |         2 |   230 |     1000000 | 1905-05-22 |          220
+ 25 | Burmese Days                      |     8 |         3 |   300 |      200000 | 1934-10-25 |          300
+ 26 | A Clergyman`s Daughter            |     8 |         3 |   300 |      300000 | 1935-08-23 |          230
+ 27 | Keep the Aspidistra Flying        |     8 |         3 |   300 |      400000 | 1936-04-20 |          318
+ 28 | Coming Up for Air                 |     8 |         3 |   300 |      400000 | 1939-12-07 |          237
+ 30 | Nineteen Eighty-Four: A Novel     |     8 |         3 |   400 |     3000000 | 1949-06-08 |          328
+(22 rows)
+
+
+SELECT id,name,city_id FROM shops WHERE id=3;
+
+bookstore=# SELECT id,name,city_id FROM shops WHERE id=3;
+ id |     name      | city_id
+----+---------------+---------
+  3 | London Bridge |       3
+(1 row)
+
+
+
+SELECT id,name,surname,city FROM authors WHERE name LIKE 'A%';
+
+bookstore=# SELECT id,name,surname,city FROM authors WHERE name LIKE 'A%';
+ id |  name  |   surname   | city
+----+--------+-------------+------
+  1 | Arthur | Conan Doyle |    1
+(1 row)
