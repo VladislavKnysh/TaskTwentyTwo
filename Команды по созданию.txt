@@ -42,3 +42,4 @@ CREATE TABLE sales
  timestamp TIMESTAMP NOT NULL,
  CONSTRAINT sales_shop_id_fk FOREIGN KEY (shop_id) REFERENCES shops(id),
  CONSTRAINT sales_book_id_fk FOREIGN KEY (book_id) REFERENCES books(id) );
+
