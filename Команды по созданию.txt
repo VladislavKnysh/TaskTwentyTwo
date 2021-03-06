@@ -20,11 +20,12 @@ name VARCHAR(30) NOT NULL UNIQUE);
 CREATE TABLE books 
 (id SERIAL PRIMARY KEY, 
 name VARCHAR(255) NOT NULL, 
-theme VARCHAR(30) NOT NULL REFERENCES theme(name),
+theme INT NOT NULL,
 author_id INT NOT NULL, price INT NOT NULL,
 circulation INT NOT NULL, date DATE NOT NULL,
 num_of_pages INT NOT NULL,
-CONSTRAINT book_author_id_fk FOREIGN KEY (author_id) REFERENCES authors(id));
+CONSTRAINT book_author_id_fk FOREIGN KEY (author_id) REFERENCES authors(id),
+CONSTRAINT book_theme_id_fk FOREIGN KEY (theme) REFERENCES theme(id));
 
 CREATE TABLE shops 
 (id SERIAL PRIMARY KEY,
